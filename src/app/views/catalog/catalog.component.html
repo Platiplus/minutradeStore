@@ -1,9 +1,11 @@
+<app-navbar></app-navbar>
+<h1>Produtos</h1>
 <ul *ngFor="let product of products | async">
     <li><a [routerLink] = "['/catalog', product.id]">
+        <figure>
         <img [src] = "product.data.imageURL"/><br>
-        <strong>{{product.data.name}}</strong><br>
-        <strong>{{product.data.details}}</strong><br>
-        <strong>{{product.data.reviews}}</strong><br><br></a>
+        <figcaption>{{product.data.name}}</figcaption>
+        </figure></a>
     </li>
   </ul>
 

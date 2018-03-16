@@ -15,6 +15,7 @@ import { HttpClientJsonpModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './services/auth-guard.service';
 import { ProductDetailsComponent } from './views/product-details/product-details.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ProductDetailsComponent } from './views/product-details/product-details
     AppComponent,
     LoginComponent,
     CatalogComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

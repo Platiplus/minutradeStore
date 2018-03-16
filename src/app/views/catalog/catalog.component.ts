@@ -3,6 +3,8 @@ import { ProductDetails } from '../../models/productDetails.model';
 import { ProductID } from '../../models/productDetails.model';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
+import { NavbarComponent } from './../../navbar/navbar.component'
+
 
 
 @Component({
