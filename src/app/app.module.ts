@@ -8,11 +8,12 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from './services/auth.service';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
 import { AuthGuard } from './services/auth-guard.service';
-import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductDetailsComponent } from './views/product-details/product-details.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     AppRoutes,
     AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FormsModule
   ],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]

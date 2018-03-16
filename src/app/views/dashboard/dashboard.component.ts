@@ -18,11 +18,6 @@ export class DashboardComponent implements OnInit {
   productDoc : AngularFirestoreDocument<ProductDetails>;
   product: Observable<ProductDetails>;
 
-  getPost(productID) {
-    this.productDoc = this.afs.doc('products/'+productID);
-    this.product = this.productDoc.valueChanges();
-  }
-
   constructor(private afs: AngularFirestore) { }
 
   ngOnInit() {
@@ -30,7 +25,7 @@ export class DashboardComponent implements OnInit {
     this.products = this.productsCollection.snapshotChanges()
       .map(actions => {
           return actions.map(a => {
-          const data = a.payload.doc.data() as ProductDetails;
+          const data = a.payload.doc.data() as ProductID;
           const id = a.payload.doc.id;
           return { id, data };
       });

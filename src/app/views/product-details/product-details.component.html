@@ -1,0 +1,6 @@
+<img [src] = "productInfo.imageURL"/><br>
+        <strong>{{productInfo.name}}</strong><br>
+        <strong>{{productInfo.details}}</strong><br>
+        <li *ngFor = "let comentarios of productInfo.reviews">{{comentarios}}</li>
+        <textarea [(ngModel)] = "comments"></textarea>
+        <button (click)="sendComments(comments)">Enviar Comentário</button>
