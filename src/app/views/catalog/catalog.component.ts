@@ -6,12 +6,12 @@ import { Observable } from 'rxjs/Observable';
 
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-catalog',
+  templateUrl: './catalog.component.html',
+  styleUrls: ['./catalog.component.css']
 })
 
-export class DashboardComponent implements OnInit {
+export class CatalogComponent implements OnInit {
 
   productsCollection: AngularFirestoreCollection<ProductDetails>;
   products: any;

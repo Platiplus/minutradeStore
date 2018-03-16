@@ -2,7 +2,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { AuthGuard } from './services/auth-guard.service'
 
 import { LoginComponent } from "./views/login/login.component";
-import { DashboardComponent } from "./views/dashboard/dashboard.component";
+import { DashboardComponent } from "./views/catalog/catalog.component";
 import { ProductDetailsComponent } from "./views/product-details/product-details.component"
 
 const appRoutes: Routes = [
@@ -11,13 +11,13 @@ const appRoutes: Routes = [
         component: LoginComponent
     },
     {
-        path: 'dashboard',
+        path: 'catalog',
         canActivate: [AuthGuard],
-        component: DashboardComponent
+        component: CatalogComponent
         
     },
     {
-        path: 'dashboard/:id',
+        path: 'catalog/:id',
         canActivate: [AuthGuard],
         component: ProductDetailsComponent
     }

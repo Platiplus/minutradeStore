@@ -4,3 +4,10 @@
         <li *ngFor = "let comentarios of productInfo.reviews">{{comentarios}}</li>
         <textarea [(ngModel)] = "comments"></textarea>
         <button (click)="sendComments(comments)">Enviar Comentário</button>
+          
+<share-buttons [theme]="'material-dark'"
+[include]="['facebook','twitter','google']"
+[showText]="true"
+></share-buttons>
+
+ 
