@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,700");
+* {
+  margin: 0;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  padding: 0;
+  width: 100%;
+}
+.container .box {
+  width: 50%;
+  height: 100%;
+}
+
+.container .box:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.container .box:first-of-type .logo {
+  width: 80%;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+.container .box:first-of-type button {
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  color: #FFF;
+  border-radius: 12px;
+  -webkit-transition-duration: .2s;
+       -o-transition-duration: .2s;
+          transition-duration: .2s;
+}
+
+.container .box:first-of-type button i{
+    font-size: 1.2em;
+    margin-right: 15px;
+}
+
+.container .box:first-of-type button:first-of-type{
+    background: #3b5998;
+}
+
+.container .box:first-of-type button:last-of-type{
+    background: #dd4b39;
+}
+
+.container .box:first-of-type button:hover {
+  cursor: pointer;
+  background: #33ab50;
+  color: #FFF;
+}
+.container .box:last-of-type {
+  background-image: url("http://media.lehighvalleylive.com/entertainment-general_impact/photo/the-game-gallery-aba8bd2b2d6ae527.jpg");
+  background-color: #33ab50;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: luminosity;
+  positon: relative;
+}
+.container .box:last-of-type p {
+  position: absolute;
+  color: #FFF;
+  font-size: 2vw;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  margin: 15px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container .box:last-of-type p em {
+  font-weight: 700;
+  font-style: normal;
+}
+
+@media screen and (max-width: 490px) {
+
+    .container{
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .container .box {
+        width: 100%;
+    }
+
+    .container .box:last-of-type{
+        display: none;
+    }
+}
