@@ -1,13 +1,39 @@
-.navbar {
-    display: inline-block;
-    width: 100%;
-    padding: 1em;
-    background-color: #d3d3d3;
-    list-style: none;
+nav{
+    width: calc(100vw - 20vw);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 25px 30px;
 }
 
-.navbar li {
-        display: inline-block;
-        float: left;
-        padding: 0 10px;
+nav a:first-of-type{
+    width: 15vw;
+    display: block;
+}
+
+nav a:first-of-type img{
+    width: 100%;
+}
+
+nav a:last-of-type{
+    color: #000;
+}
+
+nav a:last-of-type i{
+    font-size: 1.5em;
+    vertical-align: sub;
+}
+
+@media screen and (max-width: 490px){
+    nav{ width: 100vw; }
+
+    nav a:first-of-type{
+        width: 50%;
+    }
 }

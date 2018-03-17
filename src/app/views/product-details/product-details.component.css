@@ -1,0 +1,97 @@
+* { margin: 0; padding: 0;}
+
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    padding: 0 10vw;
+  }
+
+  .container .console{
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+  }
+
+  .container .console .title{
+      width: 100%;
+      margin: 15px 0;
+  }
+
+  .container .console .title p{
+    font-size: 2em;
+    color: #33ab50;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+  }
+
+  .container .console .item{
+      display: flex;
+  }
+  
+  .container .console .item .box:last-of-type{
+      margin-left: 25px;
+  }
+
+  .container .console share-buttons{
+      width: 100%;
+  }
+
+  .container .feedback{
+      width: 100%;
+      margin: 30px 0;
+  }
+
+  .container .feedback ul{
+      list-style: none;
+  }
+
+  .container .feedback ul li{
+      padding: 10px 0;
+  }
+
+  .container .feedback ul li:not(:last-of-type){
+      border-bottom: 1px solid #CCC;
+  }
+
+  .container .feedback textarea{
+      width: 100%;
+      margin: 15px 0;
+      padding: 5px;
+  }
+
+  .container .feedback button{
+      margin-top: 20px;
+        display: block;
+        margin: 0 0 0 auto;
+        background: transparent;
+        padding: 10px;
+        color: #333;
+        border: 1px solid;        
+        border-radius: 12px;
+        -webkit-transition-duration: .2s;
+        -o-transition-duration: .2s;
+            transition-duration: .2s;
+    }
+
+    .container .feedback button:hover{
+        cursor: pointer;
+        background: #33ab50;
+        color: #FFF;
+    }
+  
+
+    @media screen and (max-width: 490px){
+        .container .console .item{
+            flex-wrap: wrap;
+        }
+        .container .console .item .box:last-of-type{
+            margin: 0;
+        }
+    }

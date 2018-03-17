@@ -1,14 +1,34 @@
-<app-navbar></app-navbar>
-<img [src] = "productInfo.imageURL"/><br>
-        <strong>{{productInfo.name}}</strong><br>
-        <strong>{{productInfo.details}}</strong><br>
-        <li *ngFor = "let comentarios of productInfo.reviews">{{comentarios}}</li>
-        <textarea [(ngModel)] = "comments"></textarea>
-        <button (click)="sendComments(comments)">Enviar Comentário</button>
-          
-<share-buttons [theme]="'material-dark'"
-[include]="['facebook','twitter','google']"
-[showText]="true"
-></share-buttons>
+<div class="container">
+        <app-navbar></app-navbar>
 
- 
+        <div class="console">
+                <div class="title">
+                        <p>{{productInfo.name}}</p>
+                </div>
+
+                <div class="item">
+                        <div class="box">                        
+                                <img [src] = "productInfo.imageURL"/>
+                        </div>
+                        <div class="box">
+                                <p>{{productInfo.details}}</p>
+                        </div>
+                </div>
+
+                <share-buttons 
+                [theme]="'material-dark'"
+                [include]="['facebook','twitter','google']"
+                [showText]="true"
+                ></share-buttons>
+        </div>
+
+        <h2>Comentários</h2>
+
+        <div class="feedback">
+                <ul>
+                        <li *ngFor = "let comentarios of productInfo.reviews">{{comentarios}}</li>
+                </ul>
+                <textarea [(ngModel)] = "comments" placeholder="Digite seu comentário aqui"></textarea>
+                <button (click)="sendComments(comments)">Enviar Comentário</button>
+        </div>                        
+</div>

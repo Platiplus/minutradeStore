@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,700");
-* {
-  margin: 0;
-}
+* { margin: 0; padding: 0;}
 
 .container {
   display: -webkit-box;
@@ -35,6 +32,8 @@
   width: 80%;
   display: block;
   margin: 0 auto 20px auto;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
 }
 .container .box:first-of-type button {
   display: block;
@@ -48,6 +47,7 @@
   -webkit-transition-duration: .2s;
        -o-transition-duration: .2s;
           transition-duration: .2s;
+    opacity: 0;
 }
 
 .container .box:first-of-type button i{
@@ -57,10 +57,14 @@
 
 .container .box:first-of-type button:first-of-type{
     background: #3b5998;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .container .box:first-of-type button:last-of-type{
     background: #dd4b39;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.3s;
 }
 
 .container .box:first-of-type button:hover {
@@ -74,7 +78,8 @@
   background-size: cover;
   background-position: center;
   background-blend-mode: luminosity;
-  positon: relative;
+  position: relative;
+  width: 80%;
 }
 .container .box:last-of-type p {
   position: absolute;
@@ -104,5 +109,16 @@
 
     .container .box:last-of-type{
         display: none;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
     }
 }

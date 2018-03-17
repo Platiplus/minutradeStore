@@ -1,12 +1,11 @@
-<app-navbar></app-navbar>
-<h1>Produtos</h1>
-<ul *ngFor="let product of products | async">
-    <li><a [routerLink] = "['/catalog', product.id]">
-        <figure>
-        <img [src] = "product.data.imageURL"/><br>
-        <figcaption>{{product.data.name}}</figcaption>
-        </figure></a>
-    </li>
-  </ul>
-
-<a href="" (click)="authService.logout()">Logout</a>
+<div class="container">
+    <app-navbar></app-navbar>
+    <div class="item" *ngFor="let product of products | async">
+        <a [routerLink] = "['/catalog', product.id]">            
+            <figure [ngStyle]="{'background-image': 'url(' + product.data.imageURL + ')'}"></figure>
+            <div class="console-name">
+                <p>{{product.data.name}}</p>
+            </div>
+        </a>
+    </div>
+</div>
