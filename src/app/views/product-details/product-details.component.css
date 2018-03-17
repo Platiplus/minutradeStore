@@ -14,9 +14,12 @@
   }
 
   .container .console{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       width: 100%;
-      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   }
 
   .container .console .title{
@@ -32,6 +35,8 @@
   }
 
   .container .console .item{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
   }
   
@@ -89,7 +94,8 @@
 
     @media screen and (max-width: 490px){
         .container .console .item{
-            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
         }
         .container .console .item .box:last-of-type{
             margin: 0;
