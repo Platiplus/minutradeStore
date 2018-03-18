@@ -16,7 +16,8 @@ import { AppComponent } from './app.component';
 import { AuthGuard } from './services/auth-guard.service';
 import { ProductDetailsComponent } from './views/product-details/product-details.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { PathLocationStrategy, HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { MetaModule } from '@ngx-meta/core';
 
 @NgModule({
   declarations: [
@@ -35,9 +36,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     HttpClientModule,
     HttpClientJsonpModule,
-    ShareButtonsModule.forRoot()
+    ShareButtonsModule.forRoot(),
+    MetaModule.forRoot()
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, {provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
