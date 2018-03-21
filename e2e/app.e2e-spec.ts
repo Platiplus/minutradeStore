@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('minutrade-store App', () => {
+describe('ssr-minutrade-store App', () => {
   let page: AppPage;
 
   beforeEach(() => {

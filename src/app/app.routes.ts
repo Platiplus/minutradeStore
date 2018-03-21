@@ -13,13 +13,13 @@ const appRoutes: Routes = [
     },
     {
         path: 'catalog',
-        canActivate: [AuthGuard],
+        canActivate:[AuthGuard],
         component: CatalogComponent
         
     },
     {
         path: 'catalog/:id',
-        canActivate: [MetaGuard, AuthGuard],
+        canActivate: [MetaGuard],
         component: ProductDetailsComponent
     }
 ];
