@@ -21,6 +21,7 @@ export class ProductDetailsComponent implements OnInit {
   sendComments(comments){
     this.productInfo.reviews.push(comments);
     this.afs.collection('products').doc(this.productID).set({details: this.productInfo.details, imageURL: this.productInfo.imageURL, name: this.productInfo.name, reviews: this.productInfo.reviews});
+    this.comments = "";
   }
 
   ngOnInit() {
